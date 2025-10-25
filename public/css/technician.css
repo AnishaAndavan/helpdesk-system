@@ -1,0 +1,196 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #1f2937;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.sidebar ul li a.active,
+.sidebar ul li a:hover {
+  background-color: #2563eb;
+}
+
+.logout-btn {
+  margin-top: 50px;
+  width: 100%;
+  padding: 10px;
+  background-color: #dc2626;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #b91c1c;
+}
+
+.main-content {
+  margin-left: 270px;
+  padding: 20px;
+}
+
+.topbar h1 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.topbar span {
+  color: gray;
+  font-size: 14px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px; 
+  margin: 30px 0;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease;
+  min-height: 150px;
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #1f2937;
+}
+
+.card p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #28a745;
+}
+
+.table-section {
+  margin-top: 30px;
+  overflow-x: auto;
+}
+
+.table-section h2 {
+  margin-bottom: 10px;
+  color: #1f2937;
+}
+
+.table-section table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-section th,
+.table-section td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.table-section th {
+  background-color: #2563eb;
+  color: white;
+}
+
+tbody tr:hover {
+  background-color: #f1fff3;
+}
+
+.form-section {
+  margin-top: 30px;
+  background-color: #f3f4f6;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.form-section input,
+.form-section textarea,
+.form-section select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.form-section button {
+  width: 100%;
+  padding: 10px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.form-section button:hover {
+  background-color: #1d4ed8;
+}
+
+#ticketMessage {
+  color: green;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    padding: 15px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+}

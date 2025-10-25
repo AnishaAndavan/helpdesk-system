@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body>
+  <div class="sidebar">
+    <h2>HelpDesk Admin</h2>
+    <ul>
+      <li><a href="#" class="active">Dashboard</a></li>
+      <li><a href="#">Manage Users</a></li>
+      <li><a href="#">All Tickets</a></li>
+      <li><a href="#">Reports</a></li>
+      <li><a href="#">Settings</a></li>
+    </ul>
+    <button id="logout-btn" class="logout-btn">Logout</button>
+  </div>
+
+  <div class="main-content">
+    <div class="topbar">
+      <h1>Dashboard Overview</h1>
+      <span id="welcome-text">Welcome, Admin</span>
+    </div>
+
+    <!-- 🧩 DASHBOARD SECTION -->
+    <section id="dashboard-section" class="content-section active">
+      <div class="dashboard-grid">
+        <div class="card">
+          <h3>Total Tickets</h3>
+          <p id="total-tickets">0</p>
+        </div>
+        <div class="card">
+          <h3>Open Tickets</h3>
+          <p id="open-tickets">0</p>
+        </div>
+        <div class="card">
+          <h3>Assigned Tickets</h3>
+          <p id="assigned-tickets">0</p>
+        </div>
+        <div class="card">
+          <h3>In Progress</h3>
+          <p id="inprogress-tickets">0</p>
+        </div>
+        <div class="card">
+          <h3>Resolved Tickets</h3>
+          <p id="resolved-tickets">0</p>
+        </div>
+      </div>
+
+      <div class="table-section">
+        <h2>Recent Tickets</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Subject</th>
+              <th>Created By</th>
+              <th>Status</th>
+              <th>Created At</th>
+            </tr>
+          </thead>
+          <tbody id="recentTicketsTableBody">
+            <tr><td colspan="5">No tickets loaded yet.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 🧩 MANAGE USERS -->
+    <section id="manage-users-section" class="content-section">
+      <h2>Manage Users</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Created At</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="usersTableBody">
+          <tr><td colspan="6">Loading users...</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 🧩 ALL TICKETS -->
+    <section id="tickets-section" class="content-section">
+      <h2>All Tickets</h2>
+      <div class="table-section">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Subject</th>
+              <th>Created By</th>
+              <th>Status</th>
+              <th>Assigned To</th>
+              <th>Priority</th>
+              <th>Created At</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="allTicketsTableBody">
+            <tr><td colspan="8">Loading tickets...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 🧩 REPORTS -->
+    <section id="reports-section" class="content-section">
+      <h2>Reports</h2>
+      <p>Reports and analytics will appear here.</p>
+    </section>
+
+    <!-- 🧩 SETTINGS -->
+    <section id="settings-section" class="content-section">
+      <h2>Settings</h2>
+      <p>Admin settings and configurations.</p>
+    </section>
+  </div>
+
+  <!-- JS -->
+  <script src="js/ui.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

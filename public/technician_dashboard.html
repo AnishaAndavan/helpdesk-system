@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Technician Dashboard</title>
+  <link rel="stylesheet" href="css/admin.css" /> 
+</head>
+<body>
+  <div class="sidebar">
+    <h2>HelpDesk Technician</h2>
+    <ul>
+      <li><a href="#" class="active">Dashboard</a></li>
+      <li><a href="#">My Tickets</a></li>
+      <li><a href="#">Reports</a></li>
+      <li><a href="#">Settings</a></li>
+    </ul>
+    <button id="logout-btn" class="logout-btn">Logout</button>
+  </div>
+
+  <div class="main-content">
+    <div class="topbar">
+      <h1>Dashboard Overview</h1>
+      <span id="welcome-text">Welcome, Technician</span>
+    </div>
+
+    <section id="dashboard-section" class="content-section active">
+      <div class="dashboard-grid">
+        <div class="card">
+          <h3>Total Assigned Tickets</h3>
+          <p id="assigned-tickets">0</p>
+        </div>
+        <div class="card">
+          <h3>Open Tickets</h3>
+          <p id="open-tickets">0</p>
+        </div>
+        <div class="card">
+          <h3>In Progress</h3>
+          <p id="inprogress-tickets">0</p>
+        </div>
+        <div class="card">
+          <h3>Closed Tickets</h3>
+          <p id="closed-tickets">0</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="my-tickets-section" class="content-section">
+      <h2>My Tickets</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Subject</th>
+            <th>Description</th>
+            <th>Priority</th>
+            <th>Employee Name</th>
+            <th>Employee Email</th>
+            <th>Status</th>
+            <th>Created At</th>
+          </tr>
+        </thead>
+        <tbody id="myTicketsTableBody">
+          <tr><td colspan="8">No tickets loaded.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="reports-section" class="content-section">
+      <h2>Reports</h2>
+      <p>Reports and analytics will appear here.</p>
+    </section>
+
+    <section id="settings-section" class="content-section">
+      <h2>Settings</h2>
+      <p>Technician settings and configurations.</p>
+    </section>
+  </div>
+
+  <script src="js/ui.js"></script>
+  <script src="js/technician.js"></script>
+</body>
+</html>
