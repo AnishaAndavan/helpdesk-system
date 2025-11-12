@@ -6,16 +6,16 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 console.log("Connecting to MySQL...");
-console.log("HOST:", process.env.MYSQLHOST || process.env.DB_HOST);
-console.log("USER:", process.env.MYSQLUSER || process.env.DB_USER);
-console.log("DATABASE:", process.env.MYSQLDATABASE || process.env.DB_NAME);
+console.log("HOST:", process.env.MYSQLHOST);
+console.log("USER:", process.env.MYSQLUSER);
+console.log("DATABASE:", process.env.MYSQLDATABASE);
 
 const pool = mysql.createPool({
-  host: process.env.MYSQLHOST || process.env.DB_HOST,
-  port: process.env.MYSQLPORT || process.env.DB_PORT || 3306,
-  user: process.env.MYSQLUSER || process.env.DB_USER,
-  password: process.env.MYSQLPASSWORD || process.env.DB_PASSWORD,
-  database: process.env.MYSQLDATABASE || process.env.DB_NAME,
+  host: process.env.MYSQLHOST,
+  port: process.env.MYSQLPORT || 3306,
+  user: process.env.MYSQLUSER,
+  password: process.env.MYSQLPASSWORD,
+  database: process.env.MYSQLDATABASE,
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0,
